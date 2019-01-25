@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace映射dao层的UserDao接口名 -->
+<mapper namespace="com.wang.dao.UserDao">
+    <!-- id映射UserDao接口的方法名
+         parameterType映射入参类型
+         resultType映射返回值类型
+         -->
+
+    <!-- 根据用户名查询用户 -->
+    <select id="findUserByName" resultType="user" parameterType="String">
+        select * from tuser where username = #{username}
+    </select>
+
+    <!-- 增加用户 -->
+    <insert id="addUser" parameterType="user">
+        insert tuser(username,password) values(#{username},#{password})
+    </insert>
+</mapper>
