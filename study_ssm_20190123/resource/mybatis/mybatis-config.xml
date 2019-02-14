@@ -13,7 +13,7 @@
 
 
         <!-- 开启将从数据库查询的带下划线列名映射为实体对象中驼峰命名对应的属性名
-            例如 tuser表(user_id) -->  User类(userId)
+            例如 tuser表(user_id) ==>  User类(userId)
         -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
